@@ -1,0 +1,17 @@
+EC2
+Security Groups
+
+Security group name		-	web-server-sg
+VPC 					-	vpc-00759669c92857852 (edx-build-aws-vpc)
+Security group ID		-	sg-055714e0622e05580
+Inbound rules			-	HTTP	TCP	80	0.0.0.0/0	
+							SSH	TCP	22	0.0.0.0/0
+
+
+Amazon S3
+Create bucket
+
+Bucket name				-	ex-deployment-artifacts
+
+Create role
+role name 				-	ec2-webserver-role

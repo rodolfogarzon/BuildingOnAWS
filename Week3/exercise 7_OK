@@ -1,0 +1,49 @@
+exercise 7 
+
+DB instance identifier 	- 	edx-photos-db2
+master user name 		-	master
+password				- 	education1 
+
+Virtual Private Cloud (VPC) - edx-build-aws-vpc (vpc-00759669c92857852)
+Publicly accessible		- NO
+VPC security group		- existing
+	default
+availability zone		- no preference
+port 					- 3306
+
+Database authentication	- password authentication
+
+Database options
+Initial database name 	- Photos
+
+
+
+connection 				-	edx-photos-db2.cdaahun1ktk6.us-east-2.rds.amazonaws.com
+user project			- webuser
+password				- edxapplication01
+
+-- I got error not access to web_user on Photos (I was able to connect to the server using web_user, but I could not select) I log into the DB directly in the terminal
+
+GO
+
+edXProjectUser:~/environment $ mysql -h edx-photos-db2.cdaahun1ktk6.us-east-2.rds.amazonaws.com -u master -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 559
+Server version: 5.7.22-log Source distribution
+
+mysql> GRANT SELECT, INSERT, UPDATE, DELETE on Photos.photo to 'web_user';                                                               
+Query OK, 0 rows affected (0.00 sec)
+
+FIXED and RUN
+
+
+PHOTOS_BUCKET = os.environ['PHOTOS_BUCKET']			-	photoedxapp
+FLASK_SECRET = os.environ['FLASK_SECRET']			-	L
+
+DATABASE_HOST = os.environ['DATABASE_HOST']			-	edx-photos-db2.cdaahun1ktk6.us-east-2.rds.amazonaws.com
+DATABASE_USER = os.environ['DATABASE_USER']			-	web_user
+DATABASE_PASSWORD = os.environ['DATABASE_PASSWORD']	-	edxapplication01
+DATABASE_DB_NAME = os.environ['DATABASE_DB_NAME'] 	-	Photos
+
+

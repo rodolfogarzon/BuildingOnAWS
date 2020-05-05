@@ -1,0 +1,6 @@
+Exercise 5 Issues
+1. VFS Connection does not exists issue
+the browser does not allow the website to properly load the page. Go to Safari > Preference > Privacy and "UNCHECK" the first setting Website Tracking - Prevent cross-site tracking.
+
+Optional Challenge
+The Boto 3 list_objects method returns a LastModified property. Can you update the application to display photos in LastModified order?

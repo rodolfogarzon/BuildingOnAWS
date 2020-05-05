@@ -1,0 +1,43 @@
+Exercise 7
+
+create a MySQL database - 
+
+instance name - edx-photos-db
+
+
+Endpoint & port
+Endpoint
+edx-photos-db.cdaahun1ktk6.us-east-2.rds.amazonaws.com
+Port
+3306
+
+
+security group 
+sg-04ffe121710f9cd9d (security group id) - EC2 Security Group - Inbound (type) - sg-04ffe121710f9cd9d (rule) - vpc-00759669c92857852 (vcp id)
+
+
++add the security id for cloud9
+sg-04ffe121710f9cd9d
+
+
+
+Database host: Paste the database endpoint you noted earlier. Database user: master
+Database password: Type the password for the master user. Database name: Photos
+web_user password: Type a password for the web_user. Make a note of the web_user password for later use.
+You should see a message that a web_user is created with the required access granted to it.
+
+mysql admid 	---> master
+app_password 	---> edx_photo_33
+
+database name - Photos
+
+web_user password: education1
+
+
+--- running createtables
+
+rds_host = input("Database host> ") 	---> 	edx-photos-db.cdaahun1ktk6.us-east-2.rds.amazonaws.com
+db_user = input("Database user> ") 		--->	master 
+password = input("Database password> ")	--->	edx_photo_33
+db_name = input("Database name> ")		--->	Photos
+app_password = input("web_user password> ")	---> education1
